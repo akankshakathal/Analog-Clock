@@ -1,10 +1,8 @@
 #clockcontainer{
     position: relative;
     margin: auto;
-    height: 40vw;
-    width: 40vw;
-    height: 440px;
-    width: 440px;
+    height: 600px;
+    width: 600px;
     background: url(./image/clock.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -44,3 +42,50 @@
     left: 50%;
     opacity: 0.8;
 }
+
+.slidecontainer{
+    max-width: 200px;
+    padding: 4px;
+    position: relative;
+  }
+
+  img.icon {
+    position: absolute;
+    width: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    pointer-events: none;
+    
+    &--left{
+      left: 16%;
+    }
+    
+    &--right{
+      right: 16%;
+    }
+  }
+  
+  
+  input[type="range"] {
+    --webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    
+    background: linear-gradient(90deg, #c5caed 60%, #fefefe 0);
+    outline: none;
+    border-radius: 1.6rem;
+    height: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  
+    &::-webkit-slider-thumb,
+    &::-moz-range-thumb {
+      --webkit-appearance: none;
+      appearance: none;
+      opacity: 0;
+    }
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
