@@ -10,3 +10,24 @@ setInterval(() => {
     minute.style.transform =`rotate(${mrotation}deg)`;
     second.style.transform =`rotate(${srotation}deg)`;
 }, 1000);
+
+const DOMCOntroller = (() => {
+  const DOMElems = {
+    rangeSlider: document.getElementById("myRange"),
+    root: document.getElementById("root")
+  };
+
+  return {
+    DOMElems
+  };
+})();
+
+const UIController = (() => {
+  const { rangeSlider, root } = DOMCOntroller.DOMElems;
+
+  rangeSlider.addEventListener("change", (e) => {
+    rangeSlider.style.background = `linear-gradient(90deg, #C5CAED ${e.target.value}%, #fefefe 0)`;
+
+    root.style.backgroundColor = `rgba(0,0,0, ${1 - e.target.value / 100})`;
+  });
+})();
